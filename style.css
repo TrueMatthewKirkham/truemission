@@ -1,0 +1,30 @@
+
+
+body {
+  
+}
+
+#titleSection{
+  
+}
+
+#Hero {
+  height: 80vh;
+  
+}
+#blob {
+    animation-name: bounce;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+  }
+  
+  @keyframes bounce {
+    0%   { transform: scale(0.9); transform-origin: center;}
+    50%  { transform: scale(1.0); transform-origin: center;}
+    100% { transform: scale(0.9); transform-origin: center;}
+  }
+
+
+

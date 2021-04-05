@@ -1,0 +1,209 @@
+* {
+    font-family: 'Roboto';
+    color: rgb(30,24,24, 0.85);
+}
+
+h1{
+    font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+
+}
+
+.link {
+ color: blue;
+}
+hr {
+  justify-content: center;
+  color: #C79F12;
+  border-top: 3px solid;
+  border-radius: 15px;
+  width: 70%;
+}
+
+span {
+  color: #C79F12;
+  font-weight: 500
+}
+#hero, .project {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.4fr))
+    /*grid-template-columns: 15% minmax(300px, 600px) 15%;
+    /* doesn't work with number higher than 15 but looks good */
+}
+.main {
+    grid-column-start: 2;
+    justify-content: center;
+    align-content: center;
+}
+.Illustration{
+    min-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+
+body {
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F4F4;
+    margin: 0px;
+    
+}
+
+
+#title, .textblock{
+    text-align: center;
+    margin: 10px 0px 10px;
+    grid-column-start: 2;
+}
+
+.subtext {
+  display: grid;
+  grid-column-start: 2;
+}
+
+#quote {
+  color:rgb(38, 36, 36);
+  text-align: center;
+  font-size: 10px;
+  opacity: 80%;
+}
+
+
+
+
+
+nav {
+    border-bottom: 3px solid#C79F12 ;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+li {
+    float: right;
+}
+
+#logoMenu {
+    float: left;
+    padding: 8px 0px 0px 10%;
+    position: center;
+}
+
+footer {
+  background-color: black;
+}
+
+footer p {
+  font-size: 12px;
+  color: white;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+#logoFooter {
+  float: left;
+    position: center;
+}
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgb(38, 36, 36);
+}
+
+#blobStyle, #blobTwitter, #blobFund{
+  animation-name: bounce;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+
+}
+
+#shuttle, #socialmedia, #bird, #bird2, #bird3, #bird4
+{
+  animation: float 7s ease-in-out infinite;
+}
+
+#headset1, #codescreen, #bird5, #bird6, #bird7, #bird8 {
+  animation: float 8s ease-in-out infinite;
+}
+
+#javascript1, #react1, #bird9, #bird10, #bird11, #bird12,
+#python1 {
+  animation: float 6s ease-in-out infinite;
+}
+
+#freedom, #bird13, #bird14, #bird15,
+#bitcoin{
+  animation: float 7.5s ease-in-out infinite;
+}
+
+#logoLarge{
+  animation-name: rotate;
+  animation-timing-function: linear;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+
+
+@keyframes rotate {
+  0% { 
+    transform-origin: center center;
+    transform: rotateY(0deg)
+  }
+  50% { 
+    transform-origin: center center;
+    transform: rotateY(180deg)
+  }
+  100% { 
+    transform-origin: center center;
+    transform: rotateY(360deg)
+  }
+}
+
+
+
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      
+      transform: translatey(-5px);
+    }
+    100% {
+      
+      transform: translatey(0px);
+    }
+  }
+  
+@keyframes bounce {
+  0%   { transform: scale(0.9); transform-origin: center;}
+  50%  { transform: scale(1); transform-origin: center;}
+  100% { transform: scale(0.9); transform-origin: center;}
+}
