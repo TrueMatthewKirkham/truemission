@@ -3,6 +3,9 @@
     color: rgb(30,24,24, 0.85);
 }
 
+
+/* time to do some re-factoring*/
+
 h1{
     font-size: 24px;
 }
@@ -11,6 +14,30 @@ p {
   font-size: 18px;
 
 }
+
+#testpath {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 0;
+  animation: dash 40s linear alternate infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 4000;
+    fill: #C79F12;
+  }
+  75% {
+    stroke-dashoffset: 0;
+    fill: #C79F12;
+  }
+  100% {
+  stroke-dashoffset: 0;
+  fill: #C79F12;
+  }
+
+}
+
+
 
 .link {
  color: blue;
@@ -161,12 +188,7 @@ li a:hover {
   animation: float 7.5s ease-in-out infinite;
 }
 
-#logoLarge{
-  animation-name: rotate;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-iteration-count: infinite;
-}
+
 
 
 
@@ -184,8 +206,6 @@ li a:hover {
     transform: rotateY(360deg)
   }
 }
-
-
 
 
   @keyframes float {
