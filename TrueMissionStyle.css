@@ -1,77 +1,63 @@
 * {
     font-family: 'Roboto';
     color: rgb(30,24,24, 0.85);
+    font-size: calc(12px + 0.8vh);
 }
-
-
-/* time to do some re-factoring*/
 
 h1{
-    font-size: 24px;
+  color: #C79F12;
+  font-size: calc(18px + 1.5vw)
 }
-
-p {
-  font-size: 18px;
-
-}
-
-#testpath {
-  stroke-dasharray: 1600;
-  stroke-dashoffset: 0;
-  animation: dash 40s linear alternate infinite;
-}
-
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 4000;
-    fill: #C79F12;
-  }
-  75% {
-    stroke-dashoffset: 0;
-    fill: #C79F12;
-  }
-  100% {
-  stroke-dashoffset: 0;
-  fill: #C79F12;
-  }
-
-}
-
-
 
 .link {
- color: blue;
+ color: #C79F12;
+
 }
 hr {
+  margin: 2rem;
   justify-content: center;
   color: #C79F12;
   border-top: 3px solid;
-  border-radius: 15px;
-  width: 70%;
+  width: 100vw;
 }
 
 span {
   color: #C79F12;
-  font-weight: 500
+  font-weight: 500;
 }
 #hero, .project {
+    margin-top: 20px;
+    max-width: 1200px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 0.4fr))
-    /*grid-template-columns: 15% minmax(300px, 600px) 15%;
-    /* doesn't work with number higher than 15 but looks good */
-}
-.main {
-    grid-column-start: 2;
-    justify-content: center;
-    align-content: center;
-}
-.Illustration{
-    min-width: 300px;
-    width: 100%;
-    height: auto;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    border-bottom: 5px solid #C79F12;
+    height: 90vh;
+    margin: auto;
+
 }
 
+@media only screen and (max-width: 900px) {
+  #hero, .project {
+    height: auto;
+    width: 95%;
+  }
+  p {
+
+  }
+
+}
+
+.main {
+  width: 100%;
+  align-self: center;
+  justify-self: center;
+}
+
+.Illustration{
+    width: 100%;
+    place-self: center;
+}
 
 body {
     align-items: center;
@@ -83,14 +69,11 @@ body {
 
 
 #title, .textblock{
+    grid-row: 1;
     text-align: center;
-    margin: 10px 0px 10px;
-    grid-column-start: 2;
-}
-
-.subtext {
-  display: grid;
-  grid-column-start: 2;
+    align-self: center;
+    flex-wrap: center;
+    
 }
 
 #quote {
@@ -99,10 +82,6 @@ body {
   font-size: 10px;
   opacity: 80%;
 }
-
-
-
-
 
 nav {
     border-bottom: 3px solid#C79F12 ;
@@ -121,7 +100,7 @@ li {
 
 #logoMenu {
     float: left;
-    padding: 8px 0px 0px 10%;
+    padding: 8px 0px 0px 9%;
     position: center;
 }
 
@@ -145,16 +124,16 @@ footer ul {
 }
 #logoFooter {
   float: left;
-    position: center;
+  position: center;
 }
   
-  li a {
+li a {
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
+}
   
   /* Change the link color to #111 (black) on hover */
 li a:hover {
@@ -187,7 +166,27 @@ li a:hover {
 #bitcoin{
   animation: float 7.5s ease-in-out infinite;
 }
+#testpath {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 0;
+  animation: dash 40s linear alternate infinite;
+}
 
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 4000;
+    fill: #C79F12;
+  }
+  75% {
+    stroke-dashoffset: 0;
+    fill: #C79F12;
+  }
+  100% {
+  stroke-dashoffset: 0;
+  fill: #C79F12;
+  }
+
+}
 
 
 
