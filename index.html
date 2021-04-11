@@ -6,33 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href = "TrueMissionStyle.css"></link>
-    <?xml-stylesheet href="style.css" type="text/css"?>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script>
-  function addDarkmodeWidget() {
-    new Darkmode().showWidget();
-  }
-  window.addEventListener('load', addDarkmodeWidget);
-</script>
-
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,700' rel='stylesheet' type='text/css'>
+    <?xml-stylesheet href="TrueMissionStyle.css" type="text/css"?>
     <title>LandingPage2</title>
-    <nav>
-        <ul>
-            <li id="logoMenu" ><img src ="LOGO.svg" width="33" height="33"> </li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-    </nav>
+     
 </head>
+
 <body>
+    <nav>
+        <div>
+            <img class="logoMenu" src ="LOGO.svg" width="33" height="33"> </li>
+        </div>
+            <ul class ="navlink">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#projects"> Projects</a></li>
+                <li><a href="#footer"> Contact Us</a></li>
+  
+            </ul>
+            <div class="burger">
+                <div class = "line1"></div>
+                <div class = "line2"></div>
+                <div class = "line3"></div>
+            </div>
+    </nav> 
     <section id = "hero">
         <div class = 'main'>
             <object class = 'Illustration' type="image/svg+xml" data="MainIllustration.svg"></object>
         </div>
         </div>
-        <div class = 'textblock'>
+        <div class = 'textblock one'>
             <h1>True mission<br>
                 builds high impact, mission driven companies.</h1>
             <p> Most of all financial and creative value in history has derived from people that believed something very strongly to be <span>true</span> about the future, with a <span>mission</span> to realise it. <br><br> so that is always the focus. <br> <span id="quote">Founder Matthew (pictured)</span></p> 
@@ -40,37 +41,78 @@
              
     </section>
     
-    <section class ="project">
+    <section id = "projects" class ="project">
         <div class = "textblock">
-            <p><a class="link" href ="#" > contact us</a> for more details about how we operate,
-                 or to learn more about specific projects. 
-                 We’re grateful for your time.</p>
-                 <p><span id="quote"><a class="link" href ="#">Project Nora </a>, True social Media change and analysis.</span></p>
+            <h1>Project Nora</h1>
+            <p>Gain actionable realtime feedback on anything from bullying to stock sentiment.</p>
+                <ul class ='bulletpoint'>
+                    <li>Discover trends about anything from stock 
+                        information to emojis being used by gen Z.
+                    </li>
+
+                    <li>Use sentiment analysis around a company or sport to see 
+                        how people interact with influencers and ideas
+                    </li>
+                    
+                    <li> To help solve mental illness, bullying and abuse online. Internally,
+                         our company True Mission is working on this.
+                    </li> 
+
+                </ul> 
+                 <!-- <p><span id="quote"><a class="link" href ="#">Project Nora </a>, True social Media change and analysis.</span></p> -->
         </div>
         <div class="main">
             <object class = 'Illustration' type="image/svg+xml" data="Twitter.svg"></object>
         </div>
-        <div class="textblock">
-            
-        </div>
+       
     </section>
        
     <section class="project">
-    
+        <div class="textblock">
+            <h1>True Capital</h1>
+            <p><span id="quote"><a class="link" href ="#">True Fund </a>, Unique data, insights and consulting.  This service us currently fully subscribed.</span></p>
+        
+        <ul class ='bulletpoint'>
+            <li>No admin, management, 
+                withdrawal or deposit fees. 
+                Just performance.
+            </li>
+
+            <li>We believe divergent creative insights, followed by deductive reasoning and computational modelling can lead to a real time 
+                'true value' of resources or events. 
+            </li>
+            <li>   
+                When the cost of the associated 
+                instruments are sufficiently different 
+                to the truth value and its risk related
+                 return fits our risk-parity portfolio
+                  we allocate capital.
+            </li>  
+            </li>
+            
+            <li> We believe a combination of intelligently
+                 and carefully considered computers model
+                  in tandem with deep philosophical questions
+                 if the 'true value' is the path to true alpha.
+            </li> 
+
+        </ul> 
+        </div>
         <div class="main">
+            
             <object class = 'Illustration' type="image/svg+xml" data="TrueFundBlob.svg"></object>
         </div>
-        <div class="textblock">
-            <p><span id="quote"><a class="link" href ="#">True Fund </a>, Unique data, insights and consulting.  This service us currently fully subscribed.</span></p>
-        </div>
+        
     </section>
 
-    <footer>
+    <footer id ="footer">
         <p>TrueMission is a trading name of MAJAPEK limited, <br>a holding company fully owned by Matthew Kirkham</p>
         <ul>
             <li id="logoFooter" ><img src ="LOGO.svg" width="33" height="33"> </li>
-            <li><a href="#">matthew@truemission.io</a></li>
+            <li><a href="mailto: matthew@truemission.io">matthew@truemission.io</a></li>
           </ul>
     </footer>
+
 </body>
+    <script src="menujs.js"></script>
 </html>

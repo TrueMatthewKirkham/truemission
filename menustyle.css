@@ -14,11 +14,9 @@ nav {
     
 }
 
-.logo {
-    color: rgb(201, 198, 198);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 22px;
+.logoMenu {
+    display: flex;
+    color: #C79F12
 }
 
 .navlink {
@@ -81,7 +79,7 @@ nav {
 
 .nav-active{
     top: 8vh;
-    height: 50vh;
+    height: 25vh;
     transform: translateX(0%);
 }
 

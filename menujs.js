@@ -20,6 +20,10 @@ const navSlide = () => {
         }});
         burger.classList.toggle('toggle');
     });
+
+    window.addEventListener('resize', () => {
+        nav.classList.remove('nav-active')});
+    ;
     
 } 
 

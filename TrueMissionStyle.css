@@ -2,6 +2,7 @@
     font-family: 'Roboto';
     color: rgb(30,24,24, 0.85);
     font-size: calc(12px + 0.8vh);
+    box-sizing: border-box;
 }
 
 h1{
@@ -32,20 +33,30 @@ span {
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     border-bottom: 5px solid #C79F12;
-    height: 90vh;
+    
     margin: auto;
 
 }
 
-@media only screen and (max-width: 900px) {
-  #hero, .project {
-    height: auto;
-    width: 95%;
-  }
-  p {
+.project {
+  margin: 2rem auto 2rem auto;
+}
 
-  }
 
+.bulletpoint {
+  max-width: 600px;
+  margin: auto;
+}
+.bulletpoint li {
+  padding: 30px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  
+}
+
+#hero {
+  height: 90vh;
 }
 
 .main {
@@ -69,11 +80,15 @@ body {
 
 
 #title, .textblock{
-    grid-row: 1;
+    
     text-align: center;
     align-self: center;
     flex-wrap: center;
     
+}
+
+.one{
+  grid-row: 1;
 }
 
 #quote {
@@ -83,26 +98,7 @@ body {
   opacity: 80%;
 }
 
-nav {
-    border-bottom: 3px solid#C79F12 ;
-}
 
-ul {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-  }
-  
-li {
-    float: right;
-}
-
-#logoMenu {
-    float: left;
-    padding: 8px 0px 0px 9%;
-    position: center;
-}
 
 footer {
   background-color: black;
@@ -118,26 +114,21 @@ footer p {
   padding: 10px 0px 0px 0px;
 }
 
-footer ul {
-  display: flex;
-  justify-content: center;
-}
 #logoFooter {
-  float: left;
+  float:  center;
   position: center;
 }
-  
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+
+
+footer ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
 }
-  
-  /* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: rgb(38, 36, 36);
+footer li a{
+  color: white;
 }
 
 #blobStyle, #blobTwitter, #blobFund{
@@ -171,6 +162,127 @@ li a:hover {
   stroke-dashoffset: 0;
   animation: dash 40s linear alternate infinite;
 }
+
+/*new bits */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: black;
+  border-bottom: #C79F12 3px solid;
+}
+.logoMenu {
+  display: flex;
+  color: #C79F12
+}
+
+.navlink {
+  display: flex;
+  justify-content:space-around;
+  width: 45%;
+  color: white;
+  
+}
+.navlink li {
+  list-style: none;
+  color: white;
+}
+.navlink a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: old;
+  color: white;
+  
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div{
+  width: 30px;
+  height: 2px;
+  margin: 5px;
+  border-radius: 30px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px){
+  .main {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  #hero, .project {
+    height: auto;
+    width: 95%;
+  }
+  body{
+      overflow-x: hidden;
+  }
+
+  .navlink{
+      position: absolute;
+      right: 0px;
+      top: 8vh;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      border-radius:20px 20px 20px 20px;
+      transform: translateX(100%);
+      transition: transform 0.005s ease-in;
+  }
+
+  .navlink li{
+      opacity: 0;
+  }
+  .burger {
+      display: block;
+      position: absolute;
+      right: 0px;
+  }
+}
+
+.nav-active{
+  top: 0vh;
+  height: 25vh;
+  transform: translateX(0%);
+}
+
+
+@keyframes navlinkfade{
+  from{
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to{
+      opacity: 2;
+      transform: translateX(0px);
+  }
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+  transform: rotate(45deg) translate(-3px, -6px);
+}
+
+
+
+
+
 
 @keyframes dash {
   0% {
