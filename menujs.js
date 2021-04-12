@@ -26,5 +26,11 @@ const navSlide = () => {
     ;
     
 } 
+window.onload = ()  => {
+	if(!window.location.hash) {
+		window.location = window.location + '#Welcome';
+		window.location.reload();
+	}
+}
 
 navSlide();

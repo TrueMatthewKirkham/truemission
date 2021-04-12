@@ -117,6 +117,7 @@ footer p {
 #logoFooter {
   float:  center;
   position: center;
+  margin-right: 25px;
 }
 
 
@@ -126,6 +127,7 @@ footer ul {
   justify-content: center;
   margin: auto;
   text-align: center;
+  list-style-type: none;
 }
 footer li a{
   color: white;
@@ -212,17 +214,27 @@ nav {
 
 @media screen and (max-width: 900px) and (min-width: 600px){
   .main {
-    width: 75%;
+    width: 85%;
+  }
+
+  .one {
+    margin: 35px;
   }
 }
 
 @media screen and (max-width: 900px){
   #hero, .project {
     height: auto;
-    width: 95%;
+    overflow-x: hidden;
+    
   }
-  body{
-      overflow-x: hidden;
+  .textblock {
+    width: 85%;
+    position: center;
+    margin: auto;
+  }
+  .one {
+    margin: 35px;
   }
 
   .navlink{
@@ -235,7 +247,8 @@ nav {
       align-items: center;
       justify-content: space-around;
       border-radius:20px 20px 20px 20px;
-      transform: translateX(100%);
+      
+      visibility: hidden;
       transition: transform 0.005s ease-in;
   }
 
@@ -253,6 +266,7 @@ nav {
   top: 0vh;
   height: 25vh;
   transform: translateX(0%);
+  visibility: visible;
 }
 
 
